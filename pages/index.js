@@ -1,5 +1,5 @@
-import {server} from '../config'
 import ArticleList from '../componments/ArticleList'
+import { getArticles } from './api/articles';
 
 export default function Home({ articles }) {
   return (
@@ -10,8 +10,7 @@ export default function Home({ articles }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${server}/api/articles`)
-  const articles = await res.json()
+const articles = await getArticles();
 
   return {
     props: {
