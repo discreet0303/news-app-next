@@ -1,11 +1,10 @@
-import Link from 'next/link'
 import {useRouter} from 'next/router'
 import Meta from '../../../componments/Meta'
 
 import { getArticles, getArticleById } from '../../api/articles'
 
 const article = ({ article }) => {
-  // const route = useRouter()
+  const route = useRouter()
   // const { id } = route.query;
 
   return (
@@ -14,7 +13,7 @@ const article = ({ article }) => {
       <h1>{article.title}</h1>    
       <p>{article.body}</p>
       <br />
-      <Link href='/'>Go Back</Link>
+      <a onClick={()=> route.back()}>Go Back</a>
     </>
   )
 }
