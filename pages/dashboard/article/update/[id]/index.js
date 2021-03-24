@@ -18,6 +18,7 @@ const UpdateArticle = ({articleProps}) => {
 
   const handleSubmit = () => {
     updateArticle(article.id, article);
+    alert('更新成功');
   }
 
   return (

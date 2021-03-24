@@ -24,6 +24,7 @@ const CreateArticle = () => {
   const handleSubmit = () => {
     createArticle(article).then(res => {
       setArticle(INIT_ARTICLE)
+      alert('新增成功');
     });
   }
 
