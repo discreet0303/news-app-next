@@ -1,0 +1,9 @@
+.inputDiv input,
+.inputDiv textarea  {
+  width: 80%;
+  height: 30px;
+  margin: 10px 0;
+  border: none; 
+  border: solid 1px #ccc;
+  border-radius: 10px;
+}
